@@ -33,17 +33,17 @@
         android:layout_marginStart="2dp"
         android:layout_marginBottom="23dp"
         android:text="各种dir区别"
-        app:layout_constraintBottom_toTopOf="@+id/button3"
-        app:layout_constraintStart_toStartOf="@+id/button3" />
+        app:layout_constraintBottom_toTopOf="@+id/wechat_share_button"
+        app:layout_constraintStart_toStartOf="@+id/wechat_share_button" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/wechat_share_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="40dp"
         android:layout_marginTop="162dp"
         android:layout_marginBottom="164dp"
-        android:text="Button"
+        android:text="微信分享"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/button" />

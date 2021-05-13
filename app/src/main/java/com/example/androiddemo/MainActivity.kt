@@ -26,5 +26,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, DirDifferenceActivity::class.java);
             startActivity(intent)
         }
+
+        binding.wechatShareButton.setOnClickListener {
+            val intent = Intent(this, ShareToWechatActivity::class.java);
+            startActivity(intent)
+        }
     }
 }

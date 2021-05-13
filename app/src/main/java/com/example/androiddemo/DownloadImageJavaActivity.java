@@ -28,7 +28,7 @@ import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-// https://www.jianshu.com/p/eea5cc5ab9de
+// 参考：https://www.jianshu.com/p/eea5cc5ab9de
 public class DownloadImageJavaActivity extends AppCompatActivity implements View.OnClickListener {
 //    Context context = null;
 
