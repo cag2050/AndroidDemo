@@ -31,5 +31,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, ShareToWechatActivity::class.java);
             startActivity(intent)
         }
+
+        binding.refresh.setOnClickListener {
+            val intent = Intent(this, MediaScannerConnectionActivity::class.java);
+            startActivity(intent)
+        }
     }
 }
