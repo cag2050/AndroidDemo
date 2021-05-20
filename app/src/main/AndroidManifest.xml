@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemo">
-        <activity android:name=".MediaScannerConnectionActivity"></activity>
+        <activity android:name=".ConstraintLayoutDemoActivity"></activity>
+        <activity android:name=".MediaScannerConnectionActivity" />
         <activity android:name=".wxapi.WXEntryActivity" />
         <activity android:name=".ShareToWechatActivity" />
         <activity android:name=".MainActivity">
