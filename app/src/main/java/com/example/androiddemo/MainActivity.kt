@@ -6,11 +6,16 @@ import android.graphics.PixelFormat
 import android.os.Bundle
 import android.util.Log
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
 import com.example.androiddemo.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
+    companion object {
+        private const val TAG = "MainActivity"
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        旧写法
@@ -41,22 +46,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
-        binding.layoutParams.setOnClickListener {
-            val backgroundLP = WindowManager.LayoutParams(
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.MATCH_PARENT,
-                WindowManager.LayoutParams.LAST_APPLICATION_WINDOW,
-                WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE or WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
-                PixelFormat.TRANSPARENT
-            )
-            val windowManager = windowManager
-            var backgroundRL = RelativeLayout(applicationContext)
-//            backgroundRL.setBackgroundColor(Color.parseColor("#66000000"))
-            backgroundRL.setBackgroundColor(Color.BLACK)
-//          十六进制透明度66，转为十进制是102
-            backgroundRL.background.mutate().alpha = 102
-//            backgroundRL.addView(container)
-            windowManager.addView(backgroundRL, backgroundLP)
+        binding.svga.setOnClickListener {
+            Log.d(TAG, "svga click")
+            val intent = Intent(this, SVGAPlayActivity::class.java);
+            startActivity(intent)
         }
     }
 }

@@ -57,7 +57,7 @@ public class DownloadImageJavaActivity extends AppCompatActivity implements View
         mBtnLoading = (Button) findViewById(R.id.btn_loading);
         mBtnSaveimage = (Button) findViewById(R.id.btn_saveimage);
         mBtnDelete = (Button) findViewById(R.id.btn_delete);
-
+//        和下面的onClick配合使用
         mBtnLoading.setOnClickListener(this);
         mBtnSaveimage.setOnClickListener(this);
         mBtnDelete.setOnClickListener(this);

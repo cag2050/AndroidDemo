@@ -20,6 +20,11 @@
 # hide the original source file name.
 #-renamesourcefileattribute SourceFile
 
+# https://developers.weixin.qq.com/doc/oplatform/Mobile_App/Access_Guide/Android.html
 -keep class com.tencent.mm.opensdk.** {*;}
 -keep class com.tencent.wxop.** {*;}
 -keep class com.tencent.mm.sdk.** {*;}
+
+# https://github.com/svga/SVGAPlayer-Android/blob/master/readme.zh.md
+-keep class com.squareup.wire.** { *; }
+-keep class com.opensource.svgaplayer.proto.** { *; }
