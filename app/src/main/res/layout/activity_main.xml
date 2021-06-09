@@ -45,7 +45,7 @@
         android:id="@+id/svga"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="SVGA播放例子"
+        android:text="SVGA播放例子(只加了背景,待加svga播放器功能)"
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/refresh"/>

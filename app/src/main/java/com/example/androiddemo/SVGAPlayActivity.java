@@ -41,23 +41,18 @@ public class SVGAPlayActivity extends AppCompatActivity implements View.OnClickL
                         WindowManager.LayoutParams.MATCH_PARENT,
                         WindowManager.LayoutParams.MATCH_PARENT,
                         WindowManager.LayoutParams.LAST_APPLICATION_WINDOW,
-                        WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE,
+                        WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE | WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE | WindowManager.LayoutParams.FLAG_DIM_BEHIND,
                         PixelFormat.TRANSPARENT
                 );
+//                设置 WindowManager.LayoutParams 的透明度：配置 WindowManager.LayoutParams.FLAG_DIM_BEHIND 和 dimAmount
+                mLayoutParams.dimAmount = 0.6f;
                 WindowManager windowManager = getWindowManager();
+
                 RelativeLayout mRelativeLayout = new RelativeLayout(getApplicationContext());
-                mRelativeLayout.setBackgroundColor(Color.parseColor("#66000000"));
-//            mRelativeLayout.setBackgroundColor(Color.BLACK)
-//          十六进制透明度66，转为十进制是102
-//            mRelativeLayout.background.mutate().alpha = 102
-//            mRelativeLayout.addView(container)
+                Button mButton = new Button(getApplicationContext());
+                mButton.setText("测试Button");
+                mRelativeLayout.addView(mButton);
 
-//                Button mButton = new Button(getApplicationContext());
-//                mButton.setText("测试Button");
-//                mRelativeLayout.addView(mButton);
-
-                SVGAImageView mSVGAImageView = new SVGAImageView(this);
-                mRelativeLayout.addView(mSVGAImageView);
                 Log.d(TAG, "mSVGAImageView");
                 windowManager.addView(mRelativeLayout, mLayoutParams);
                 break;
