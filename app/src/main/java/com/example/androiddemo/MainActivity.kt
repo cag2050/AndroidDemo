@@ -51,5 +51,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, SVGAPlayActivity::class.java);
             startActivity(intent)
         }
+
+        binding.MaterialButton.setOnClickListener {
+            val intent = Intent(this, MaterialButtonActivity::class.java);
+            startActivity(intent)
+        }
     }
 }

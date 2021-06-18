@@ -13,7 +13,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AndroidDemo">
-        <activity android:name=".SVGAPlayActivity"></activity>
+        <activity android:name=".MaterialButtonActivity"></activity>
+        <activity android:name=".SVGAPlayActivity" />
         <activity android:name=".ConstraintLayoutDemoActivity" />
         <activity android:name=".MediaScannerConnectionActivity" />
         <activity android:name=".wxapi.WXEntryActivity" />
