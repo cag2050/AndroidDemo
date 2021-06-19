@@ -56,5 +56,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, MaterialButtonActivity::class.java);
             startActivity(intent)
         }
+
+        binding.textImageCenter.setOnClickListener {
+            val intent = Intent(this, TextViewImageViewActivity::class.java);
+            startActivity(intent)
+        }
     }
 }

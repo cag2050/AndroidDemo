@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AppCompatTextViewActivity">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/pay_now"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/common_shape_pay_dialog_btn_bg"
+        android:drawableLeft="@drawable/icon_leave"
+        android:drawablePadding="1dp"
+        android:gravity="center"
+        android:paddingVertical="12dp"
+        android:text="立即购买"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/common_shape_pay_dialog_btn_bg"
+        android:drawableStart="@drawable/icon_leave"
+        android:drawableTop="@drawable/icon_leave"
+        android:drawableEnd="@drawable/icon_leave"
+        android:drawableBottom="@drawable/icon_leave"
+        android:drawablePadding="0dp"
+        android:gravity="center"
+        android:text="这是文字"
+        android:textColor="#fff"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pay_now" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

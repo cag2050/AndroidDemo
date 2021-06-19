@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.androiddemo">
+    package="com.example.androiddemo" >
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -12,14 +12,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidDemo">
-        <activity android:name=".MaterialButtonActivity"></activity>
+        android:theme="@style/Theme.AndroidDemo" >
+        <activity android:name=".TextViewImageViewActivity" >
+        </activity>
+        <activity android:name=".AppCompatTextViewActivity" />
+        <activity android:name=".MaterialButtonActivity" />
         <activity android:name=".SVGAPlayActivity" />
         <activity android:name=".ConstraintLayoutDemoActivity" />
         <activity android:name=".MediaScannerConnectionActivity" />
         <activity android:name=".wxapi.WXEntryActivity" />
         <activity android:name=".ShareToWechatActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
