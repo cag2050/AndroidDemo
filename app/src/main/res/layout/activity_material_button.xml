@@ -6,9 +6,11 @@
     android:layout_height="match_parent"
     tools:context=".MaterialButtonActivity">
 
-<!-- android - 圆角在按钮中不起作用：https://www.nuomiphp.com/eplan/678865.html -->
+    <!-- MaterialButton 使用：https://www.cnblogs.com/cag2050/p/14902568.html -->
+
+    <!-- 如果按钮背景是纯色，可以通过app:backgroundTint指定 -->
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/status_btn"
+        android:id="@+id/btn1"
         android:layout_width="300dp"
         android:layout_height="40dp"
         android:layout_marginStart="16dp"
@@ -27,5 +29,51 @@
         app:iconGravity="textStart"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- 指定 style="@style/Widget.MaterialComponents.Button.UnelevatedButton"，这样就能去掉阴影 -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn2"
+        style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:gravity="center"
+        android:text="@string/common_text_online"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:backgroundTint="@color/common_color_00D471"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/icon_leave"
+        app:iconGravity="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn1" />
+
+    <!-- 如果按钮背景是渐变色，则需要自己定义drawable，然后通过android:background设置；需要设置：app:backgroundTint="@null" -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn3"
+        android:layout_width="300dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:gravity="center"
+        android:text="@string/common_text_online"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12dp"
+        app:backgroundTint="@null"
+        android:background="@drawable/shape_bg_22cornor_playgame"
+        android:textStyle="bold"
+        app:cornerRadius="12dp"
+        app:icon="@drawable/icon_leave"
+        app:iconGravity="textStart"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn2"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
