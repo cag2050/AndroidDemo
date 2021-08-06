@@ -48,4 +48,5 @@ dependencies {
 
     api 'com.tencent.mm.opensdk:wechat-sdk-android-without-mta:+'
     api 'com.github.yyued:SVGAPlayer-Android:2.5.15'
+    api 'com.blankj:utilcode:1.23.4'
 }

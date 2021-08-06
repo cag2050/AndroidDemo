@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
 //        旧写法
 //        setContentView(R.layout.activity_main)
@@ -59,6 +60,11 @@ class MainActivity : AppCompatActivity() {
 
         binding.textImageCenter.setOnClickListener {
             val intent = Intent(this, TextViewImageViewActivity::class.java);
+            startActivity(intent)
+        }
+
+        binding.locationManager.setOnClickListener {
+            val intent = Intent(this, LocationManagerActivity::class.java);
             startActivity(intent)
         }
     }
