@@ -76,4 +76,13 @@
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textImageCenter"/>
+
+    <Button
+        android:id="@+id/textViewMarquee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView实现滚动显示效果"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/locationManager"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

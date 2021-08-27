@@ -67,5 +67,10 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, LocationManagerActivity::class.java);
             startActivity(intent)
         }
+
+        binding.textViewMarquee.setOnClickListener {
+            val intent = Intent(this, TextViewMarqueeActivity::class.java);
+            startActivity(intent)
+        }
     }
 }

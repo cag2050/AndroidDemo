@@ -83,9 +83,12 @@ public class LocationManagerActivity extends AppCompatActivity {
             return;
         // 有权限
         } else {
+            // 获取上一次知道的Location getLastKnownLocation
             Location location = locationManager.getLastKnownLocation(provider);
             if (location != null) {
                 showLocation(location);
+            } else {
+                Log.d(TAG, "没获取到Location");
             }
             locationManager.requestLocationUpdates(provider, 5000, 5,
                     locationListener);

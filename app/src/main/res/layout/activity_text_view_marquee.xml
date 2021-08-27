@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".TextViewMarqueeActivity">
+
+    <com.example.androiddemo.widget.customview.MarqueeTextView
+        android:id="@+id/chat_risk_tip"
+        android:layout_width="match_parent"
+        android:layout_height="27dp"
+        android:background="#FFF6E8"
+        android:drawableLeft="@mipmap/icon_chat_risk_tip"
+        android:drawablePadding="3dp"
+        android:gravity="center_vertical"
+        android:text="@string/chat_risk_tip"
+        android:textColor="#fffc703e"
+        android:textSize="11sp"
+        android:paddingHorizontal="16dp"
+        android:visibility="visible"
+        tools:visibility="visible"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
