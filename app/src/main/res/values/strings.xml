@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">AndroidDemo</string>
     <string name="common_text_online">Online</string>
-    <string name="chat_risk_tip">严禁涉黄、诈骗等违法行为，如遇对方疑似违法，请及时举报</string>
+    <string name="chat_risk_tip">严禁涉黄、诈骗等违法行为，如遇对方疑似违法，请及时举报；再写1遍：严禁涉黄、诈骗等违法行为，如遇对方疑似违法，请及时举报</string>
 </resources>
