@@ -85,4 +85,13 @@
         android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/locationManager"/>
+
+    <Button
+        android:id="@+id/checkBoxDemo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="拦截CheckBox的选中事件"
+        android:textAllCaps="false"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewMarquee"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

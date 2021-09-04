@@ -14,8 +14,9 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.AndroidDemo">
-        <activity android:name=".TextViewMarqueeActivity"></activity>
+        android:theme="@style/CommonAppTheme">
+        <activity android:name=".CheckBoxActivity"></activity>
+        <activity android:name=".TextViewMarqueeActivity" />
         <activity android:name=".LocationManagerActivity" />
         <activity android:name=".TextViewImageViewActivity" />
         <activity android:name=".AppCompatTextViewActivity" />

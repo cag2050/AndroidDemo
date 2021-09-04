@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--主体颜色-->
+    <attr name="common_attr_color_primary" format="color" />
+    <attr name="common_attr_color_accent" format="color" />
+
+    <declare-styleable name="CircularProgressView">
+        <attr name="backWidth" format="dimension" />    <!--背景圆环宽度-->
+        <attr name="progWidth" format="dimension" />    <!--进度圆环宽度-->
+        <attr name="backColor" format="color" />        <!--背景圆环颜色-->
+        <attr name="progColor" format="color" />        <!--进度圆环颜色-->
+        <attr name="progStartColor" format="color" />   <!--进度圆环开始颜色-->
+        <attr name="progFirstColor" format="color" />   <!--进度圆环结束颜色-->
+<!--        <attr name="progress" format="integer" />       &lt;!&ndash;圆环进度&ndash;&gt;-->
+    </declare-styleable>
+
+    <declare-styleable name="CommonCircleImageView">
+        <attr name="common_civ_border_width" format="dimension" />
+        <attr name="common_civ_border_color" format="color" />
+        <attr name="common_civ_border_overlay" format="boolean" />
+        <attr name="common_civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <!-- 自定义验证码输入框-->
+    <declare-styleable name="CommonIdentifyingCodeView">
+        <!--输入框的数量-->
+        <attr name="common_icv_et_number" format="integer" />
+        <!--输入框的宽度-->
+        <attr name="common_icv_et_width" format="dimension|reference" />
+        <!--输入框之间的分割线-->
+        <attr name="common_icv_et_divider_drawable" format="reference" />
+        <!--输入框文字颜色-->
+        <attr name="common_icv_et_text_color" format="color|reference" />
+        <!--输入框文字大小-->
+        <attr name="common_icv_et_text_size" format="integer" />
+        <!--输入框获取焦点时边框-->
+        <attr name="common_icv_et_bg_focus" format="reference" />
+        <!--输入框没有焦点时边框-->
+        <attr name="common_icv_et_bg_normal" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="CommonAndroidWheelView">
+        <attr name="common_awv_textsize" format="integer" />
+        <attr name="common_awv_lineSpace" format="float" />
+        <attr name="common_awv_centerTextColor" format="integer" />
+        <attr name="common_awv_outerTextColor" format="integer" />
+        <attr name="common_awv_dividerTextColor" format="integer" />
+        <attr name="common_awv_itemsVisibleCount" format="integer" />
+        <attr name="common_awv_isLoop" format="boolean" />
+        <attr name="common_awv_initialPosition" format="integer" />
+        <attr name="common_awv_scaleX" format="float" />
+    </declare-styleable>
+
+
+
+    <declare-styleable name="ContactsIndexBar" tools:ignore="ResourceName">
+        <attr name="letterSize" format="dimension" />
+        <attr name="letterColor" format="color" />
+        <attr name="focusLetterColor" format="color" />
+        <attr name="letterSpacingExtra" format="float" />
+    </declare-styleable>
+
+    <declare-styleable name="ContactsSwipeMenuLayout" tools:ignore="ResourceName">
+        <attr name="swipeEnable" format="boolean" />
+        <attr name="ios" format="boolean" />
+        <attr name="leftSwipe" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="ProcessImageView" tools:ignore="ResourceName">
+        <attr name="isVideo" format="boolean" />
+    </declare-styleable>
+
+    <declare-styleable name="CleanableEditText" tools:ignore="ResourceName">
+        <attr name="clearIcon" format="integer" />
+        <attr name="scale" format="float" />
+    </declare-styleable>
+
+
+    <declare-styleable name="TextDrawable">
+        <attr name="leftDrawable" format="reference" />
+        <attr name="leftDrawableWidth" format="dimension" />
+        <attr name="leftDrawableHeight" format="dimension" />
+        <attr name="rightDrawable" format="reference" />
+        <attr name="rightDrawableWidth" format="dimension" />
+        <attr name="rightDrawableHeight" format="dimension" />
+        <attr name="topDrawable" format="reference" />
+        <attr name="topDrawableWidth" format="dimension" />
+        <attr name="topDrawableHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="ImageDotView">
+        <attr name="src" format="reference" />
+    </declare-styleable>
+
+    <declare-styleable name="ContactTitleBar" >
+        <attr name="backgroundColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="ErrorView">
+        <attr name="text" format="string" />
+        <attr name="img" format="reference" />
+        <attr name="btn_text" format="string" />
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressView">
+        <attr name="progress_color" format="color" />
+        <attr name="thumb_radius" format="dimension" />
+        <attr name="progress_circle_color" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="BFrameLayout">
+        <attr name="aspectRatio2" format="float"/>
+    </declare-styleable>
+
+    <declare-styleable name="DownloadProgressButton">
+        <attr name="progress_btn_radius" format="dimension" />
+        <attr name="progress_btn_background_start_color" format="color" />
+        <attr name="progress_btn_background_end_color" format="color" />
+        <attr name="progress_btn_background_second_color" format="color" />
+        <attr name="progress_btn_text_color" format="color" />
+        <attr name="progress_btn_text_cover_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="CountdownRingView">
+        <attr name="ring_default_color" format="color" />
+        <attr name="ring_progress_start_color" format="color" />
+        <attr name="ring_progress_end_color" format="color" />
+        <attr name="ring_stroke_width" format="dimension" />
+        <attr name="ring_countdown_duration" format="integer" />
+    </declare-styleable>
+    <declare-styleable name="TagFlowLayout">
+        <attr name="max_select" format="integer" />
+        <attr name="tag_gravity">
+            <enum name="left" value="-1" />
+            <enum name="center" value="0" />
+            <enum name="right" value="1" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="TaskItemView">
+        <attr name="task_title" format="string" />
+        <attr name="task_des" format="string" />
+        <attr name="task_btn_text" format="string" />
+        <attr name="task_logo" format="reference" />
+    </declare-styleable>
+</resources>

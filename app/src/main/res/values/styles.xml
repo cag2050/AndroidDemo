@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!--app的主题-->
+    <style name="CommonAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="editTextStyle">@style/EditTextStyle.Alignment</item>
+        <item name="android:textViewStyle">@style/TextViewStyle.TextDirection</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowAnimationStyle">@style/CommonActivityAnimation</item>
+        <item name="android:launchMode">singleTop</item>
+        <item name="android:windowBackground">@color/common_background</item>
+        <item name="common_attr_color_primary">@color/common_color_primary</item>
+        <item name="common_attr_color_accent">@color/common_color_primary_light</item>
+        <item name="colorPrimary">@color/common_color_primary</item>
+        <item name="colorPrimaryDark">@color/common_color_primary</item>
+        <item name="colorAccent">@color/common_btn_bg_primary_dart</item>
+    </style>
+
+    <declare-styleable name="MyScrollView">
+        <attr name="maxHeight" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="CustomStarView">
+        <!--未选中星星-->
+        <attr name="originalStar" format="integer" />
+        <!--选中星星-->
+        <attr name="focusStar" format="integer" />
+        <!--星星总数-->
+        <attr name="startNumber" format="integer" />
+        <!--星星间距-->
+        <attr name="startSpace" format="dimension" />
+    </declare-styleable>
+
+    <style name="EditTextStyle.Alignment" parent="@android:style/Widget.EditText">
+        <item name="android:textAlignment">viewStart</item>
+        <item name="android:gravity">start</item>
+        <item name="android:textDirection">locale</item>
+    </style>
+
+    <style name="TextViewStyle.TextDirection" parent="android:Widget.TextView">
+        <item name="android:textDirection">locale</item>
+    </style>
+
+
+    <style name="CommonNoAnimAppTheme" parent="CommonAppTheme">
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="CommonAlphaAppTheme" parent="CommonAppTheme">
+        <item name="android:windowAnimationStyle">@style/CommonAlphaActivityAnimation</item>
+    </style>
+
+    <style name="CommonTransTheme" parent="CommonAppTheme">
+        <!--        <item name="android:windowIsTranslucent">true</item>-->
+        <item name="android:windowBackground">@color/common_transparent</item>
+    </style>
+
+    <style name="CommonTransNoAnimationTheme" parent="CommonNoAnimAppTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowBackground">@color/common_transparent</item>
+    </style>
+
+    <style name="CommonLaunchTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">#FFFAD6FF</item>
+        <item name="android:launchMode">singleTop</item>
+        <item name="android:windowBackground">@drawable/bg_splash</item>
+    </style>
+
+
+    <!--app的主题-->
+
+    <!--全屏模式-->
+    <style name="CommonFullTransScreenTheme" parent="CommonTransTheme">
+
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+    </style>
+
+    <style name="FloatPre" parent="CommonFullTransScreenTheme">
+        <item name="android:windowFullscreen">false</item>
+    </style>
+
+    <!--全屏透明模式-->
+    <style name="CommonFullScreenTheme" parent="CommonAppTheme">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--dialog的主题-->
+    <style name="CommonDialogTheme" parent="android:style/Theme.Dialog">
+        <!--背景颜色及和透明程度-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--是否去除标题 -->
+        <item name="android:windowNoTitle">true</item>
+        <!--是否模糊-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="DialogTheme" parent="@style/Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!--动画-->
+    <!--Activity 跳转动画-->
+    <style name="CommonActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/common_anim_right_to_center</item>
+        <item name="android:activityOpenExitAnimation">@anim/core_anim_center_to_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/core_anim_left_to_center</item>
+        <item name="android:activityCloseExitAnimation">@anim/core_anim_center_to_right</item>
+    </style>
+
+    <!--Activity 垂直跳转动画-->
+
+    <style name="CommonAlphaActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/core_anim_alpha_zero_one</item>
+        <item name="android:activityOpenExitAnimation">@anim/core_anim_alpha_one_zero</item>
+        <item name="android:activityCloseEnterAnimation">@anim/core_anim_alpha_zero_one</item>
+        <item name="android:activityCloseExitAnimation">@anim/core_anim_alpha_one_zero</item>
+    </style>
+
+    <!--底部弹窗dialog-->
+    <style name="CommonBottomDialogTheme" parent="CommonDialogTheme">
+        <item name="android:windowAnimationStyle">@style/CommonBottomDialogAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <style name="CommonTopDialogTheme" parent="CommonDialogTheme">
+        <item name="android:windowAnimationStyle">@style/CommonTopDialogAnimation</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+    </style>
+
+    <!--底部弹窗dialog动画-->
+    <style name="CommonBottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/common_bottom_dialog_slide_show</item>
+        <item name="android:windowExitAnimation">@anim/common_bottom_dialog_slide_hide</item>
+    </style>
+
+    <style name="CommonTopDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/common_top_dialog_slide_show</item>
+        <item name="android:windowExitAnimation">@anim/common_top_dialog_slide_hide</item>
+    </style>
+
+    <style name="common_dialog" parent="Theme.AppCompat.Dialog">
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--没有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景昏暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+    </style>
+
+    <style name="common_center_dialog" parent="Theme.AppCompat.Dialog">
+        <!--背景透明-->
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <!--没有标题-->
+        <item name="android:windowNoTitle">true</item>
+        <!--背景昏暗-->
+        <item name="android:backgroundDimEnabled">true</item>
+        <!-- 是否有边框 -->
+        <item name="android:windowFrame">@null</item>
+        <!--是否在悬浮Activity之上  -->
+        <item name="android:windowIsFloating">true</item>
+        <!--阴影  -->
+        <item name="android:windowIsTranslucent">false</item><!--半透明-->
+        <!-- 点外边可以消失  -->
+        <item name="android:windowCloseOnTouchOutside">false</item>
+    </style>
+
+
+
+    <style name="common_dialog_with_mini" parent="@style/common_dialog">
+        <item name="android:windowMinWidthMajor">1%</item>
+        <item name="android:windowMinWidthMinor">1%</item>
+    </style>
+
+    <style name="fragment_dialog_theme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <style name="fragment_dialog_bottom_theme" parent="@style/fragment_dialog_theme">
+        <item name="android:windowAnimationStyle">@style/CommonBottomDialogAnimation</item>
+    </style>
+
+    <style name="core_CustomProgressDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:backgroundDimAmount">0.0</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+    </style>
+
+    <!--
+                圆角布局 {@link RoundConstraintLayout}
+            -->
+    <declare-styleable name="RCAttrs" tools:ignore="ResourceName">
+        <!--是否剪裁为圆形-->
+        <attr name="round_as_circle" format="boolean|reference" />
+        <!--总体圆角半径-->
+        <attr name="round_corner" format="dimension|reference" />
+        <attr name="round_corner_top_left" format="dimension|reference" />
+        <attr name="round_corner_top_right" format="dimension|reference" />
+        <attr name="round_corner_bottom_left" format="dimension|reference" />
+        <attr name="round_corner_bottom_right" format="dimension|reference" />
+        <!--描边颜色-->
+        <attr name="stroke_color" format="color|reference" />
+        <!--描边半径-->
+        <attr name="stroke_width" format="dimension|reference" />
+        <!--剪裁背景 boolean-->
+        <attr name="clip_background" format="boolean|reference" />
+    </declare-styleable>
+    <declare-styleable name="TimeCountView">
+        <attr name="colorFilter" format="color" />
+        <attr name="show_des" format="boolean" />
+        <attr name="show_hour" format="boolean" />
+    </declare-styleable>
+    <declare-styleable name="LureVideoCardView">
+        <attr name="radius" format="dimension" />
+        <attr name="radius_color" format="color" />
+    </declare-styleable>
+
+
+    <!-- ShadowLayout 阴影 -->
+    <declare-styleable name="ShadowLayout">
+        <attr name="shadowColor" format="color" />
+        <attr name="shadowRadius" format="dimension" />
+        <attr name="shadowDx" format="dimension" />
+        <attr name="shadowDy" format="dimension" />
+        <attr name="shadowShapeRad" format="dimension" />
+        <attr name="shadowShape">
+            <flag name="rectangle" value="0x0001" />
+            <flag name="oval" value="0x0010" />
+            <flag name="shape" value="0x0011" />
+        </attr>
+        <attr name="shadowSide">
+            <flag name="all" value="0x1111" />
+            <flag name="left" value="0x0001" />
+            <flag name="top" value="0x0010" />
+            <flag name="right" value="0x0100" />
+            <flag name="bottom" value="0x1000" />
+        </attr>
+    </declare-styleable>
+    <color name="black_00_color">#00000000</color>
+
+
+    <style name="green_circle_switch_style" parent="@android:style/Widget.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/common_green_circle_switch_selector</item>
+    </style>
+    
+    <style name="common_seekbar">
+        <item name="android:maxHeight">3dp</item>
+        <item name="android:thumb">@drawable/common_seekbar_thumb</item>
+        <item name="android:progressDrawable">@drawable/app_upgrade_progressbar_style</item>
+    </style>
+</resources>

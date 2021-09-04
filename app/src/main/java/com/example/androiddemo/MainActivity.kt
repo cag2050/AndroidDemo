@@ -72,5 +72,9 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this, TextViewMarqueeActivity::class.java);
             startActivity(intent)
         }
+        binding.checkBoxDemo.setOnClickListener {
+            val intent = Intent(this, CheckBoxActivity::class.java);
+            startActivity(intent)
+        }
     }
 }
